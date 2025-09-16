@@ -8,7 +8,8 @@ const app = express();
 app.use("/api/webhooks/clerk", bodyParser.raw({ type: "application/json" }));
 
 app.post("/api/webhooks/clerk", (req, res) => {
-  const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
+  //const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
+  const WEBHOOK_SECRET = "whsec_/SXYKhRMD4gWEplflY/QIsSKVws3DTzF";
 
   if (!WEBHOOK_SECRET) {
     throw new Error("Missing CLERK_WEBHOOK_SECRET");
